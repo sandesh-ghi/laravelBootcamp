@@ -1,9 +1,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Add a new student</title>
+    <title>student form</title>
 </head>
 <body>
+<h2>Add a new student</h2>
 <form action="{{route('backend.student.store')}}" method="post">
     @csrf
     <label for="name">Name:</label>
