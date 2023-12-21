@@ -20,8 +20,6 @@ return new class extends Migration
             $table->foreign(columns: 'author_id')->on('authors')->references('author_id');
             $table->unsignedBigInteger('type_id');
             $table->foreign(columns: 'type_id')->on('types')->references('type_id');
-
-
             $table->timestamps();
         });
     }

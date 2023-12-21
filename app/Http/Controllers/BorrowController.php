@@ -31,7 +31,7 @@ class BorrowController extends Controller
     {
         //
 
-        dd($request='all');
+        //dd($request='all');
         $borrow=Borrows::create($request->all());
         dd($borrow);
     }

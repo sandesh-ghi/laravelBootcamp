@@ -30,7 +30,7 @@ class TypeController extends Controller
     public function store(Request $request)
     {
 
-        dd($request='all');
+        //dd($request='all');
         $type=Types::create($request->all());
         dd($type);
     }

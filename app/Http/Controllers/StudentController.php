@@ -28,7 +28,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request='all');
+        //dd($request='all');
         $student=Students::create($request->all());
         dd($student);
     }

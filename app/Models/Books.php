@@ -9,5 +9,6 @@ class Books extends Model
 {
     use HasFactory;
     protected $table='books';
-    protected $fillable =['name','pageCount','point','author_id','type_id'];
+    protected  $primaryKey='book_id';
+    protected $fallible =['name','pageCount','point','author_id','type_id'];
 }

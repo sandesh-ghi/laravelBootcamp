@@ -9,5 +9,5 @@ class Borrows extends Model
 {
     use HasFactory;
     protected $table ='borrows';
-    protected $fillable =['name','pageCount','point','author_id','type_id','student_id','book_id','taken_date','brought_date'];
+    protected $fallible=['name','pageCount','point','author_id','type_id','student_id','book_id','taken_date','brought_date'];
 }

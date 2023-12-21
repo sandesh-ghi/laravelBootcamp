@@ -9,5 +9,5 @@ class Types extends Model
 {
     use HasFactory;
     protected $table='types';
-    protected $fillable =['name'];
+    protected $fallible =['name'];
 }

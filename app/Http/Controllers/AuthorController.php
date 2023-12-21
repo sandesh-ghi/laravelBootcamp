@@ -13,6 +13,9 @@ class AuthorController extends Controller
     public function index()
     {
         //
+        $authors=Authors::all();
+        return view('backend.authors.index',compact('authors'));
+
     }
 
     /**
@@ -30,41 +33,53 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
 
-             dd($request='insert');
+             //dd($request='all');
                $author=Authors::create($request->all());
-             dd($author);
+            // dd($author);
+             return redirect()->route('backend.authors.index');
+
 
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $author_id)
     {
         //
+        $author =Authors::find($author_id);
+        return view('backend.authors.show',compact('author'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $author_id)
     {
         //
+        $author=Authors::find($author_id);
+        return view('backend.authors.edit',compact('author'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $author_id)
     {
         //
+        $author=Authors::find($author_id);
+        $author->update($request->all());
+        return redirect()->route('backend.authors.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $author_id)
     {
         //
+        $author=Authors::find($author_id);
+        $author->delete();
+        return redirect()->route('backend.authors.index');
     }
 }
